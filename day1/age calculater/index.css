@@ -1,0 +1,25 @@
+.Container1{
+    position: absolute;
+    z-index: 1;
+    left: 20%;
+    top: 20%;
+    width: 50%;
+    height: 50%;
+    background-color: aqua;  
+    text-align: center; 
+    box-shadow: 10px 10px lightblue; 
+    /*border-radius: 3%;*/
+
+}
+
+.Container2{
+    position: absolute;
+    z-index: 0;
+    top:20%;
+    left: 20%;
+    width: 50%;
+    height: 50%;
+    background-color:rgb(54, 142, 164);  
+    text-align: center;  
+    box-shadow: 10px 10px lightblue;
+}

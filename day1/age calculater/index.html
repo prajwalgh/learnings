@@ -1,13 +1,22 @@
 <html>
     <head>
         <title>Age Calculater</title>
+        <link rel="stylesheet" href="index.css" >
     </head>
     <body>
-       <div class="Container">
-        <form>
+       <div class="Container1">
+        <h1>Todays Date is : </h1>
+        <p id="Date"></p>
+        <div>
          <label>Enter D.O.B</label>
-         <input type="date"  name="dob" value="">
-        </form>
+         <input type="date"  name="dob" id="dob">
+         <button onclick="getAge()" >Submit</button>
+        </div>
        </div> 
-    </body>
+       <div class="Container2">
+        <p> your age is :</p>
+        <p id="age"></p>
+       </div>
+    </body> 
+    <script src="index.js"></script>
 </html>
