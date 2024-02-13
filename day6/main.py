@@ -2,32 +2,41 @@ import global_var
 import databaseF
 from collections import Counter
 
-grid=[[0 for i in range(global_var.n)] for i in range(global_var.n)]
-grid[0][1]=1
-grid[0][2]=1
-grid[0][3]=1
-grid[4][1]=1
-grid[4][1]=1
-grid[4][1]=1
-grid[5][1]=1
-grid[5][2]=1
-grid[5][3]=1
-grid[1][5]=1
-grid[2][5]=1
-grid[3][5]=1
-print(grid)
+def create_grid_from_db()->list:
+    grid=[[0 for i in range(global_var.n)] for i in range(global_var.n)]
+    grid[0][1]=1
+    # grid[0][2]=1
+    # grid[1][2] = 1
+    # grid[2][2] = 1
+    # grid[5][2] = 1
+    # grid[6][2] = 1
+    # grid[7][2] = 1
+    #
+    # grid[0][3]=1
+    # grid[4][1]=1
+    # grid[4][1]=1
+    grid[4][1]=1
+    grid[5][1]=1
+    grid[5][2]=1
+    grid[5][3]=1
+    grid[1][5]=1
+    grid[2][5]=1
+    grid[3][5]=1
+    return grid
+
+
 # databaseF.createDb()
 # databaseF.store(grid)
 # databaseF.retrive()
 #databaseF.update("2",0)
 
-def kill(i,j):
+def kill(grid,i,j):
     grid[i][j]=0
 
-def give_life(i,j):
+def give_life(grid,i,j):
     grid[i][j]=1
 
-def check(i, j):
+def check(grid,i, j):
     """
     Function to check surrounding cells of the current cell at position (i, j)
     and increment count based on the values of those cells.
@@ -60,23 +69,23 @@ def check(i, j):
 
     return count
 
-
-
-def traverse_grid():
+def traverse_grid(grid):
+    print(grid ,"in traverse_grid")
     for i in range(global_var.n):
         for j in range(global_var.n):
-            x=check(i,j)
-            print(i,j,x,grid)
+            x=check(grid,i,j)
+            print(i,j,x)
             if x>=3:
-                give_life(i, j)
+                give_life(grid,i, j)
             else:
-                kill(i,j)
-
-i=3
-while i:
-    i-=1
-    traverse_grid()
-    c=[Counter(i)for i in grid]
-    print(c)
-    print("===========================================================================================")
-    print(grid)
+                kill(grid,i,j)
+    return grid
+#
+# i=3
+# while i:
+#     i-=1
+#     # traverse_grid()
+#     c=[Counter(i)for i in grid]
+#     print(c)
+#     print("===========================================================================================")
+#     print(grid)
