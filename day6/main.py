@@ -5,16 +5,20 @@ from collections import Counter
 def create_grid_from_db()->list:
     grid=[[0 for i in range(global_var.n)] for i in range(global_var.n)]
     grid[0][1]=1
-    # grid[0][2]=1
-    # grid[1][2] = 1
-    # grid[2][2] = 1
-    # grid[5][2] = 1
-    # grid[6][2] = 1
-    # grid[7][2] = 1
-    #
-    # grid[0][3]=1
-    # grid[4][1]=1
-    # grid[4][1]=1
+    grid[0][2]=1
+    grid[11][2] = 1
+    grid[12][2] = 1
+    grid[15][2] = 1
+    grid[16][2] = 1
+    grid[17][2] = 1
+    grid[11][2] = 1
+    grid[12][12] = 1
+    grid[15][12] = 1
+    grid[16][12] = 1
+    grid[17][12] = 1
+    grid[0][13]=1
+    grid[4][1]=1
+    grid[4][1]=1
     grid[4][1]=1
     grid[5][1]=1
     grid[5][2]=1

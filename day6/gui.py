@@ -39,7 +39,7 @@ class GameOfLifeApp:
         self.master = master
         self.grid = grid
         master.title("Game of Life")
-        master.geometry("370x300")
+        master.geometry("500x500")
         self.setup_grid()
 
     def setup_grid(self):
@@ -55,15 +55,32 @@ class GameOfLifeApp:
         self.setup_grid()
 
     def run(self):
+        print("run.....")
         self.setup_grid()
-        # for i in range(3):
-        #     time.sleep(1)
-        #     a=main.traverse_grid(self.grid)
-        #     self.update_grid(a)
+        print("......")
+        self.update_grid(self.grid)
+        for _ in range(7):
+            print("pp")
+            self.master.update()
+            self.master.after(1000, self.update_grid, main.traverse_grid(self.grid))
+            time.sleep(1)
         self.master.mainloop()
+
+    # def run(self):
+    #     print("run.....")
+    #     self.setup_grid()
+    #     print("......")
+    #     time.sleep(10)
+    #     self.update_grid(self.grid)
+    #     for i in range(3):
+    #         time.sleep(1)
+    #         a=main.traverse_grid(self.grid)
+    #         self.update_grid(a)
+    #     self.master.mainloop()
 
 if __name__ == "__main__":
     root = tk.Tk()
     grid = main.create_grid_from_db()
     app = GameOfLifeApp(root, grid)
     app.run()
+    root.mainloop()

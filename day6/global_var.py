@@ -1,1 +1,1 @@
-n=10  #setting the grid size
+n=20  #setting the grid size
