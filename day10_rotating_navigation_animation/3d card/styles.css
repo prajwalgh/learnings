@@ -1,0 +1,55 @@
+.card {
+    width: 200px;
+    height: 300px;
+    position: relative;
+}
+
+.card .front,
+.card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    /* Hide the back face of the card */
+    transition: transform 0.5s;
+    /* Add smooth transition for transform */
+}
+
+.card .front {
+    background-color: #df1717;
+}
+
+.card .back {
+    background-color: #e6e6e6;
+    transform: rotateY(180deg);
+    /* Initially rotate the back face */
+}
+
+
+.card:hover .front {
+    transform: rotateY(-180deg);
+    /* Rotate the front face on hover */
+}
+
+.card:hover .back {
+    transform: rotateY(0deg);
+    /* Rotate the back face on hover */
+}
+/* .card:active .front {
+    transform: rotateY(-180deg);
+    /* Rotate the front face on hover */
+} */
+
+/* .card:active .back {
+    transform: rotateY(0deg);
+    /* Rotate the back face on hover */
+} */
+
+/* Additional styling for readability */
+.card h2 {
+    margin: 0;
+}
+
+.card p {
+    margin: 10px 0;
+}

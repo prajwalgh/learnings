@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3333;
+    color: #222;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    background-color: aliceblue;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+
+.container.show-nav + nav li{
+    transform: translate(0);
+    transition-delay: 0.3s;
+}
+
+nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul{
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+nav ul li{
+    text-transform: capitalize;
+    color: aliceblue;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: trasform 0.4s ease-in;
+}
+
+nav ul li i{
+    font-size: 20px;
+    margin-right:10px ;
+    
+}
+
+nav ul li + li{
+    margin-left: 15px;
+        transform: translateX(-150%);
+
+}
+
+nav ul li + li + li{
+    margin-left: 30px;
+        transform: translateX(-200%);
+
+}
+
+/*
+###################
+Article css
+###################
+*/
+.content {
+    max-width: 800px;
+    /* Adjust the maximum width according to your layout */
+    margin: 0 auto;
+    /* Center the content horizontally */
+    
+    /* Add padding around the content */
+}
+.container.container.show-nav .circle{
+    transform: rotate(-70deg);
+}
+
+img {
+    max-width: 100%;
+    /* Ensure images don't exceed the container width */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Ensure images are displayed as blocks */
+    margin: 20px auto;
+    /* Add margin to center the image horizontally and provide spacing */
+}
+
+article {
+    /* padding: 20px; */
+}
+
+
+
+
+/* circle*/
+
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+.circle{
+    background-color: darkorange;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: tranform 0.5s linear;
+}
+.circle button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: wheat;
+    }
+
+.circle button:focus{
+    outline: none;
+}
+
+.circle button#open{
+    left: 60%;
+
+}
+
+.circle button#close{
+    top: 60%;
+    transform-origin: top left ;
+    transform: rotate(90deg);
+}
