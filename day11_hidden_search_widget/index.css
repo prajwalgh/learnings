@@ -1,0 +1,46 @@
+body{
+  background-color: black;
+    padding: 0;
+    margin: 0; 
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}
+input{
+    position: relative;
+    border: none;
+    height: 55px;
+    width: 55px;
+    transform: width 0.3s ease;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor:pointer;
+  border: none;
+button.active {
+  transform: translateX(198px);
+}
+  height: 55px;
+  width: 55px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  /* padding: 20px 32px; */
+}
+
+button:focus input:focus{
+  outline: none;
+
+}
+
+
+input.active {
+  width: 200px;
+}
+
+button.active {
+  transform: translateX(198px);
+}
+
