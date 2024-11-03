@@ -1,0 +1,64 @@
+1. define the app
+        A. backend : want to develop api that give info to show on todo list
+            i.  user inputs task to be done ( ask for deadline and set defalult deadline to EOD.)
+                    a. categorise the task : exam , life
+                    b. color task based on priority
+                    c. recommend task
+                    d. motivate
+
+            ii. user should be able to insert priority , specific time
+            iii.  repetitive task like new habit , gym , badminton
+            iv. user can set in what whay to repeat  repetitive task
+            v. reminder setter do this task at this time , give motivation , give you future self direaction to stive to goal you have set in preset.
+            vi. remind to revise as subject
+
+            optional :
+            i. add flask card feature
+            ii. daily show a summary of a ted talk
+
+
+
+2. define the scope/future
+3. define architecture to be used
+
+4. user voice assistant better than any in market:
+
+4.1 : way to see if you are not focues and help u focus on study and attain your goal
+5. user activity tracker :
+    track what was user doing on his pc all day:
+        analyse url
+
+19-05-2024
+   Current Status
+    Backend API: Created using Flask and SQLAlchemy.
+    Models: Defined for User, Category, Priority, Task, and Reminder.
+    Endpoints:
+    POST /tasks: Create a task.
+    GET /tasks/<int:user_id>: Get tasks for a user.
+    GET /tasks/<int:user_id>/recommend: Get recommended tasks for a user.
+    PUT /tasks/<int:task_id>: Update a task.
+    DELETE /tasks/<int:task_id>: Delete a task.
+  Next Steps
+    User Authentication:
+
+    Implement registration and login endpoints.
+    Use JWT for secure user authentication.
+    Task Recommendations:
+
+    Enhance logic to recommend tasks based on various criteria (e.g., deadlines, user preferences).
+    Error Handling and Validation:
+
+    Implement comprehensive error handling.
+    Validate request data to ensure correctness.
+    Frontend Development:
+
+    Develop a user interface using a frontend framework like React or Vue.js.
+    Integrate frontend with the Flask API.
+    Deployment:
+
+    Prepare the application for deployment (e.g., using Heroku, AWS).
+    Set up a production database and configure the app for production use.
+    Testing:
+
+    Write unit tests for your endpoints.
+    Ensure coverage of edge cases and error scenarios.

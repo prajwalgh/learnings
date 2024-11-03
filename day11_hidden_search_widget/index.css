@@ -20,10 +20,7 @@ button {
   left: 0;
   cursor:pointer;
   border: none;
-button.active {
-  transform: translateX(198px);
-}
-  height: 55px;
+  height: 56px;
   width: 55px;
   background-color: #fff;
   transition: transform 0.3s ease;
